@@ -1,13 +1,16 @@
+import { Login } from './components/Login'
 import './index.css'
+import { Route, Routes } from 'react-router-dom'
 
 function App() {
 
   return (
     <>
-      <div className='h-screen flex items-center justify-center'>
-        <p className='text-4xl text-center p-5'>Hola mundo Tailwindcss</p>
+      <div className='text-white h-[100vh] flex justify-center items-center bg-cover' style={{"backgroundImage":"url('../src/images/lamboblue.jpg')"}}>
+        <Routes>
+          <Route path='login' element={<Login/>}/>
+        </Routes>
       </div>
-      
     </>
   )
 }
