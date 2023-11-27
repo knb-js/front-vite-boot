@@ -30,7 +30,7 @@ export const Register = () => {
             Swal.fire({
                 icon: "error",
                 title: "Error!!!",
-                text: "no se ha registrado el usuario!"
+                text: "No se ha registrado el usuario!"
             });
         });
     }
