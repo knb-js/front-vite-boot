@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import ClientService from '../services/ClientService';
+import Swal from 'sweetalert2';
 
 export const Register = () => {
 
@@ -17,8 +18,20 @@ export const Register = () => {
         const client = { rut, dv, name, lastName, email, password, phone }
         ClientService.registerClientUser(client).then((response)=>{
             console.log(response.data)
+            Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "Usuario registrado con éxito!",
+                showConfirmButton: false,
+                timer: 1500
+            });
         }).catch(error=>{
             console.log(error)
+            Swal.fire({
+                icon: "error",
+                title: "Error!!!",
+                text: "usuario ya registrado"
+            });
         });
     }
 
