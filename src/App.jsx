@@ -1,4 +1,5 @@
 import { Login } from './components/Login'
+import { Register } from './components/Register'
 import './index.css'
 import { Route, Routes } from 'react-router-dom'
 
@@ -9,6 +10,7 @@ function App() {
       <div className='text-white h-[100vh] flex justify-center items-center bg-cover' style={{"backgroundImage":"url('../src/images/lamboblue.jpg')"}}>
         <Routes>
           <Route path='login' element={<Login/>}/>
+          <Route path='register' element={<Register/>}/>
         </Routes>
       </div>
     </>
