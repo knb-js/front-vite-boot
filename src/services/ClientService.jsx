@@ -7,6 +7,11 @@ class ClientService{
     registerClientUser(client){
         return axios.post(`${CLIENT_BASE_URL_API_REST}/registerUser`,client)
     }
+
+    loginUser(client){
+        return axios.post(`${CLIENT_BASE_URL_API_REST}/loginUser`,client)
+    }
+
 }
 
 export default new ClientService();
