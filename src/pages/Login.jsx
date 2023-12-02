@@ -1,8 +1,8 @@
-
-import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import ClientService from '../services/ClientService';
 import Swal from 'sweetalert2';
+import RecoverPasswordLink from '../components/RecoverPasswordLink';
+import RegisterLink from '../components/RegisterLink';
 
 export const Login = () => {
 
@@ -63,18 +63,10 @@ export const Login = () => {
                             >iniciar sesión</button>
                     </div>
                     <div className='flex items-center justify-center mb-4'>
-                        {/* <div>
-                            <input type="checkbox" name="" id="" />
-                            <label htmlFor="Remember"></label>
-                        </div> */}
-
-                        <button 
-                            type="submit" 
-                            className='hover:text-cyan-500 transition-colors duration-300'
-                            >recuperar contraseña</button>
+                        <RecoverPasswordLink/>
                     </div>
                     <div className='flex items-center justify-center mb-4'>
-                        <span>Eres nuevo? <Link to="/register" className='hover:text-cyan-500 transition-colors duration-300'>regístrate aquí</Link> </span>
+                        <RegisterLink/>
                     </div>
                 </form>
             </div>
